@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="每日小结, 邵黄平的博客">
+    <meta name="keywords" content="ADS射频电路仿真学习笔记1-常用仿真器, 邵黄平的博客">
     <meta name="description" content="a home of an rf/antenna engineer">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>每日小结 | 邵黄平的博客</title>
+    <title>ADS射频电路仿真学习笔记1-常用仿真器 | 邵黄平的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">每日小结</h1>
+                    <h1 class="description center-align post-title">ADS射频电路仿真学习笔记1-常用仿真器</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%AF%8F%E6%97%A5%E5%B0%8F%E7%BB%93/">
-                                <span class="chip bg-color">每日小结</span>
+                            <a href="/tags/%E5%B0%84%E9%A2%91%E4%BB%BF%E7%9C%9F/">
+                                <span class="chip bg-color">射频仿真</span>
+                            </a>
+                        
+                            <a href="/tags/ADS/">
+                                <span class="chip bg-color">ADS</span>
                             </a>
                         
                     </div>
@@ -443,8 +447,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%B0%8F%E7%BB%93/" class="post-category">
-                                小结
+                            <a href="/categories/%E5%BE%AE%E6%B3%A2%E4%BB%BF%E7%9C%9F%E8%BD%AF%E4%BB%B6-ADS/" class="post-category">
+                                微波仿真软件-ADS
                             </a>
                         
                     </div>
@@ -456,7 +460,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-22
+                    2021-02-23
                 </div>
                 
 
@@ -477,7 +481,199 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>​    今天自己效率过低，没有进行多少学术科研工作和自我提升的事情，感觉自己拖延症的老毛病又开始犯了，自我反思觉得在面对一个新目标前，自己往往先开始选择逃避，哪怕知道自己是错的，用这种方式去拜托舒适圈带来的不适感。自己2021年想在生活、社交、学术上都有一个比较大的提升，有时候这种不确定性反而有点吓住自己，让自己总想再缩回自己以前的壳里面。但是以前血淋淋的教训都在不断告诉自己，逃避永远只会让自己更糟，未知并不可怕，自己有勇气并且有能力去适应新环境，2019年工作考研那么大的压力都挺下来，不要辜负你自己，就像之前刘主任在我离职的时候说的话，以后面对任何事，拿出你考研时期的决心和毅力，没有什么是办不成的。最近在读的被讨厌的勇气一书中不也再说，不要把你的过去当成你继续逃避的接口，你的逃避其实是你自己不断地吓着不改变自己生活方式的决心。想要改变需要勇气，你拥有这样的勇气和智慧，你可以改变自己去追求属于自己的幸福，通过努力成长我一样可以进步。自己可以在不断地学习和磨砺中达到自己的目标，只要继续前进，哪怕只是一小步都尤为重要，不要停下来，你要逼迫自己成熟起来，逼迫自己继续进步。</p>
+                <ul>
+<li><p>常见仿真器</p>
+<ul>
+<li><p>直流仿真</p>
+<ul>
+<li><p>电路拓扑检查</p>
+</li>
+<li><p>直流工作点扫描和分析</p>
+</li>
+</ul>
+</li>
+<li><p>交流仿真——小信号传输(线性设计)</p>
+<ul>
+<li><p>设计对象</p>
+<ul>
+<li>无源电路和小信号有源电路（<strong>低噪声放大器</strong>）</li>
+</ul>
+</li>
+<li><p>测试对象</p>
+<ul>
+<li>电压增益、电流增益、线性噪声电压、线性噪声电流</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>S参数仿真</strong>——非线性网络</p>
+<ul>
+<li><p>测量参数</p>
+<ul>
+<li><p>S11 S22——输入输出驻波特性</p>
+</li>
+<li><p>S21——电路的幅频特性和相频特性和群时延</p>
+</li>
+<li><p>S12——隔离性能</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>谐波（HB）平衡仿真</strong>——信号频域特性——非线性网络——小信号分析</p>
+<ul>
+<li><p>设计对象</p>
+<ul>
+<li>射频放大器、混频器、振荡器、设计大规模RFIC或RF/IF子系统——存在大量谐波和交调成分</li>
+</ul>
+</li>
+<li><p>适用范围</p>
+<ul>
+<li><p>调制的周期信号可以用几个<strong>简单的单载波及其谐波</strong>来表示/傅里叶级数展开式很简单</p>
+</li>
+<li><p>不具备简单周期信号特点的CDMA信号就不适用（复杂的需要采用包络仿真）</p>
+</li>
+</ul>
+</li>
+<li><p>原理</p>
+<ul>
+<li><p>一般网络由线性子网络和非线性子网络组成</p>
+<ul>
+<li><p>线性子网络——频率代数特性</p>
+</li>
+<li><p>非线性子网络——时域的非线性方程</p>
+</li>
+</ul>
+</li>
+<li><p>平衡时</p>
+<ul>
+<li><p>经傅里叶变换的时域的线性子网络的端口电压和电流应该满足非线性子网络的端口电压和电流</p>
+</li>
+<li><p>反之亦然</p>
+</li>
+</ul>
+</li>
+<li><p>设定一个最大的谐波数，建立一个线性子网络电压/电流和非线性子网络电压/电流的误差函数</p>
+<ul>
+<li>通过迭代，实现稳态的线性子网络和非线性子网络的谐波平衡</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>测试对象（非线性指标）</p>
+<ul>
+<li>噪声系数（噪声）、饱和电平、三阶交调（非线性指标）、本振泄露、镜像抑制、中频抑制、组合干扰（混频器和链路分析用）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>大信号S参数仿真——大信号分析</p>
+<ul>
+<li><p>设计对象——<strong>功放</strong></p>
+</li>
+<li><p>谐波平衡仿真的一种</p>
+</li>
+</ul>
+</li>
+<li><p>增益压缩仿真（XDB）——增益压缩点的寻找（谐波仿真也可以测dB压缩点）</p>
+</li>
+<li><p><strong>电路包络仿真</strong>——数模混合仿真和数字微波系统、复杂调制波形的仿真、随时间变化的电路（PLL/AGC/调制器/VCO）</p>
+<ul>
+<li><p>原理（谐波平衡法的延伸和拓展）</p>
+<ul>
+<li><p>高频调制信号分解为时域和频域进行处理</p>
+<ul>
+<li><p>时域-相对低频的调制信息直接采样</p>
+</li>
+<li><p>高频-谐波平衡的方法在频域处理</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>研究对象</p>
+<ul>
+<li>调制解调以及混合调制信号的电路和系统</li>
+<li>信道的失真仿真</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>瞬态仿真</p>
+<ul>
+<li><p>直接在时域对电流电压列节点方程，采用一刀切的方式，对所有模拟数字电路进行仿真</p>
+</li>
+<li><p>高频信号很难采用SPICE处理，需要更高的CPU</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>微波射频电路设计的ADS仿真器</p>
+<ul>
+<li><p><strong>最常用——S参数仿真、电路包络仿真、谐波平衡仿真</strong></p>
+</li>
+<li><p>滤波器</p>
+<ul>
+<li>S参数</li>
+</ul>
+</li>
+<li><p>混频器</p>
+<ul>
+<li><p>DC——工作点状态</p>
+</li>
+<li><p>AC——增益、噪声电压、噪声电流</p>
+</li>
+<li><p>谐波平衡——IP3、IF</p>
+</li>
+<li><p>transient——瞬态响应</p>
+</li>
+<li><p>envelope——包络仿真</p>
+</li>
+</ul>
+</li>
+<li><p>功放</p>
+<ul>
+<li><p>S参数仿真</p>
+</li>
+<li><p>谐波平衡——各种谐波和交调</p>
+</li>
+<li><p>LSSP——大信号S参数</p>
+</li>
+<li><p>XDB——P-1</p>
+</li>
+<li><p>envelop——包络特性</p>
+</li>
+</ul>
+</li>
+<li><p>接收机</p>
+<ul>
+<li><p>AC</p>
+</li>
+<li><p>谐波平衡仿真——谐波和交调</p>
+</li>
+<li><p>包络——复杂波形</p>
+</li>
+</ul>
+</li>
+<li><p>振荡器</p>
+<ul>
+<li><p>DC——节点电压、电流</p>
+</li>
+<li><p>谐波仿真——谐波和交调</p>
+</li>
+<li><p>包络仿真</p>
+</li>
+</ul>
+</li>
+<li><p>锁相环</p>
+<ul>
+<li>包络——相位噪声</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
                 
             </div>
@@ -504,7 +700,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://shaohp-seu.github.io/2021/02/22/2021-02-22-%E6%AF%8F%E6%97%A5%E5%B0%8F%E7%BB%93/">http://shaohp-seu.github.io/2021/02/22/2021-02-22-%E6%AF%8F%E6%97%A5%E5%B0%8F%E7%BB%93/</a>
+                    <a href="http://shaohp-seu.github.io/2021/02/23/2021-02-23-ADS%E5%B0%84%E9%A2%91%E7%94%B5%E8%B7%AF%E4%BB%BF%E7%9C%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E5%B8%B8%E7%94%A8%E4%BB%BF%E7%9C%9F%E5%99%A8/">http://shaohp-seu.github.io/2021/02/23/2021-02-23-ADS%E5%B0%84%E9%A2%91%E7%94%B5%E8%B7%AF%E4%BB%BF%E7%9C%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E5%B8%B8%E7%94%A8%E4%BB%BF%E7%9C%9F%E5%99%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -542,8 +738,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%AF%8F%E6%97%A5%E5%B0%8F%E7%BB%93/">
-                                    <span class="chip bg-color">每日小结</span>
+                                <a href="/tags/%E5%B0%84%E9%A2%91%E4%BB%BF%E7%9C%9F/">
+                                    <span class="chip bg-color">射频仿真</span>
+                                </a>
+                            
+                                <a href="/tags/ADS/">
+                                    <span class="chip bg-color">ADS</span>
                                 </a>
                             
                         </div>
@@ -715,9 +915,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/02/23/2021-02-23-ADS%E5%B0%84%E9%A2%91%E7%94%B5%E8%B7%AF%E4%BB%BF%E7%9C%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E5%B8%B8%E7%94%A8%E4%BB%BF%E7%9C%9F%E5%99%A8/">
                     <div class="card-image">
@@ -735,9 +936,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -750,6 +951,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -772,19 +974,19 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/22/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86(%E6%9C%AA%E5%AE%8C)/">
+                <a href="/2021/02/22/2021-02-22-%E6%AF%8F%E6%97%A5%E5%B0%8F%E7%BB%93/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="数字信号处理1-DTFT">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="每日小结">
                         
-                        <span class="card-title">数字信号处理1-DTFT</span>
+                        <span class="card-title">每日小结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            主要梳理的是数字信号处理的相关概念，建立一个数字信号处理系统的概念，基于奥本海姆的离散时间信号处理
+                            都是一些碎碎念，每天复盘，学习闭环
                         
                     </div>
                     <div class="publish-info">
@@ -795,8 +997,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/" class="post-category">
-                                    信号处理
+                            <a href="/categories/%E5%B0%8F%E7%BB%93/" class="post-category">
+                                    小结
                                 </a>
                             
                             
@@ -806,8 +1008,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/DTFT/">
-                        <span class="chip bg-color">DTFT</span>
+                    <a href="/tags/%E6%AF%8F%E6%97%A5%E5%B0%8F%E7%BB%93/">
+                        <span class="chip bg-color">每日小结</span>
                     </a>
                     
                 </div>

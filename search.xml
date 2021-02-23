@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>ADS射频电路仿真学习笔记1-常用仿真器</title>
+      <link href="2021/02/23/2021-02-23-ADS%E5%B0%84%E9%A2%91%E7%94%B5%E8%B7%AF%E4%BB%BF%E7%9C%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E5%B8%B8%E7%94%A8%E4%BB%BF%E7%9C%9F%E5%99%A8/"/>
+      <url>2021/02/23/2021-02-23-ADS%E5%B0%84%E9%A2%91%E7%94%B5%E8%B7%AF%E4%BB%BF%E7%9C%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E5%B8%B8%E7%94%A8%E4%BB%BF%E7%9C%9F%E5%99%A8/</url>
+      
+        <content type="html"><![CDATA[<ul><li><p>常见仿真器</p><ul><li><p>直流仿真</p><ul><li><p>电路拓扑检查</p></li><li><p>直流工作点扫描和分析</p></li></ul></li><li><p>交流仿真——小信号传输(线性设计)</p><ul><li><p>设计对象</p><ul><li>无源电路和小信号有源电路（<strong>低噪声放大器</strong>）</li></ul></li><li><p>测试对象</p><ul><li>电压增益、电流增益、线性噪声电压、线性噪声电流</li></ul></li></ul></li><li><p><strong>S参数仿真</strong>——非线性网络</p><ul><li><p>测量参数</p><ul><li><p>S11 S22——输入输出驻波特性</p></li><li><p>S21——电路的幅频特性和相频特性和群时延</p></li><li><p>S12——隔离性能</p></li></ul></li></ul></li><li><p><strong>谐波（HB）平衡仿真</strong>——信号频域特性——非线性网络——小信号分析</p><ul><li><p>设计对象</p><ul><li>射频放大器、混频器、振荡器、设计大规模RFIC或RF/IF子系统——存在大量谐波和交调成分</li></ul></li><li><p>适用范围</p><ul><li><p>调制的周期信号可以用几个<strong>简单的单载波及其谐波</strong>来表示/傅里叶级数展开式很简单</p></li><li><p>不具备简单周期信号特点的CDMA信号就不适用（复杂的需要采用包络仿真）</p></li></ul></li><li><p>原理</p><ul><li><p>一般网络由线性子网络和非线性子网络组成</p><ul><li><p>线性子网络——频率代数特性</p></li><li><p>非线性子网络——时域的非线性方程</p></li></ul></li><li><p>平衡时</p><ul><li><p>经傅里叶变换的时域的线性子网络的端口电压和电流应该满足非线性子网络的端口电压和电流</p></li><li><p>反之亦然</p></li></ul></li><li><p>设定一个最大的谐波数，建立一个线性子网络电压/电流和非线性子网络电压/电流的误差函数</p><ul><li>通过迭代，实现稳态的线性子网络和非线性子网络的谐波平衡</li></ul></li></ul></li><li><p>测试对象（非线性指标）</p><ul><li>噪声系数（噪声）、饱和电平、三阶交调（非线性指标）、本振泄露、镜像抑制、中频抑制、组合干扰（混频器和链路分析用）</li></ul></li></ul></li><li><p>大信号S参数仿真——大信号分析</p><ul><li><p>设计对象——<strong>功放</strong></p></li><li><p>谐波平衡仿真的一种</p></li></ul></li><li><p>增益压缩仿真（XDB）——增益压缩点的寻找（谐波仿真也可以测dB压缩点）</p></li><li><p><strong>电路包络仿真</strong>——数模混合仿真和数字微波系统、复杂调制波形的仿真、随时间变化的电路（PLL/AGC/调制器/VCO）</p><ul><li><p>原理（谐波平衡法的延伸和拓展）</p><ul><li><p>高频调制信号分解为时域和频域进行处理</p><ul><li><p>时域-相对低频的调制信息直接采样</p></li><li><p>高频-谐波平衡的方法在频域处理</p></li></ul></li></ul></li><li><p>研究对象</p><ul><li>调制解调以及混合调制信号的电路和系统</li><li>信道的失真仿真</li></ul></li></ul></li><li><p>瞬态仿真</p><ul><li><p>直接在时域对电流电压列节点方程，采用一刀切的方式，对所有模拟数字电路进行仿真</p></li><li><p>高频信号很难采用SPICE处理，需要更高的CPU</p></li></ul></li></ul></li><li><p>微波射频电路设计的ADS仿真器</p><ul><li><p><strong>最常用——S参数仿真、电路包络仿真、谐波平衡仿真</strong></p></li><li><p>滤波器</p><ul><li>S参数</li></ul></li><li><p>混频器</p><ul><li><p>DC——工作点状态</p></li><li><p>AC——增益、噪声电压、噪声电流</p></li><li><p>谐波平衡——IP3、IF</p></li><li><p>transient——瞬态响应</p></li><li><p>envelope——包络仿真</p></li></ul></li><li><p>功放</p><ul><li><p>S参数仿真</p></li><li><p>谐波平衡——各种谐波和交调</p></li><li><p>LSSP——大信号S参数</p></li><li><p>XDB——P-1</p></li><li><p>envelop——包络特性</p></li></ul></li><li><p>接收机</p><ul><li><p>AC</p></li><li><p>谐波平衡仿真——谐波和交调</p></li><li><p>包络——复杂波形</p></li></ul></li><li><p>振荡器</p><ul><li><p>DC——节点电压、电流</p></li><li><p>谐波仿真——谐波和交调</p></li><li><p>包络仿真</p></li></ul></li><li><p>锁相环</p><ul><li>包络——相位噪声</li></ul></li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 微波仿真软件-ADS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 射频仿真 </tag>
+            
+            <tag> ADS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>每日小结</title>
       <link href="2021/02/22/2021-02-22-%E6%AF%8F%E6%97%A5%E5%B0%8F%E7%BB%93/"/>
       <url>2021/02/22/2021-02-22-%E6%AF%8F%E6%97%A5%E5%B0%8F%E7%BB%93/</url>
