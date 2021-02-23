@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>数字信号处理2-z-tranform</title>
+      <link href="2021/02/23/2021-02-23-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%862-z-tranform/"/>
+      <url>2021/02/23/2021-02-23-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%862-z-tranform/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>z变换是因为离散时间傅里叶变换不能保证对所有序列收敛引出的</p></li><li><p>收敛域—单位圆上（而不是单位圆内），本质上只是级数收敛的很简单的问题，只是用很复杂的符号来表示，你只是不适应那种新符号，而不是不懂得内在的原理</p></li><li><p>这里要和稳定和因果结合起来考虑</p><ol><li>稳定，单位圆在收敛域内</li><li>因果，收敛域在最右极点之外</li></ol></li><li><p>反z变换的方法</p><ol><li>变换对</li><li>部分因式法</li><li>contour intergration</li></ol></li><li><p>z变换的性质—抓住z变换的两个方程是核心</p><ol><li>线性</li><li>卷积</li><li>反序列</li></ol></li><li><p>零极点的分析</p><ol><li>boxcar sequence——有限长序列</li><li>已知零极点画频率响应的大致图形—把系统响应看成两个向量之比，对其进行分解其实也就一般的大小和增减变化，没什么特别的思路</li></ol></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 信号处理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> z-tranform </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ADS射频电路仿真学习笔记2-学习各种仿真的注意点</title>
       <link href="2021/02/23/2021-02-23-ADS%E5%B0%84%E9%A2%91%E7%94%B5%E8%B7%AF%E4%BB%BF%E7%9C%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E5%AD%A6%E4%B9%A0%E5%90%84%E7%A7%8D%E4%BB%BF%E7%9C%9F%E7%9A%84%E6%B3%A8%E6%84%8F%E7%82%B9/"/>
       <url>2021/02/23/2021-02-23-ADS%E5%B0%84%E9%A2%91%E7%94%B5%E8%B7%AF%E4%BB%BF%E7%9C%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-%E5%AD%A6%E4%B9%A0%E5%90%84%E7%A7%8D%E4%BB%BF%E7%9C%9F%E7%9A%84%E6%B3%A8%E6%84%8F%E7%82%B9/</url>
@@ -50,6 +75,31 @@
             <tag> 射频仿真 </tag>
             
             <tag> ADS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数字信号处理3-DFT</title>
+      <link href="2021/02/23/2021-02-23-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%863-DFT/"/>
+      <url>2021/02/23/2021-02-23-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%863-DFT/</url>
+      
+        <content type="html"><![CDATA[<ol><li>DFS—离散傅里叶序列，是一个序列，而不是一个连续变量的函数，相应于对信号的傅里叶变换进行频率的等间隔取样的样本。</li><li>有限长序列的处理方式是周期化变成周期序列</li><li>DFS的表示方法，与DTFT有所变化要对比着学习</li><li>DFS特性<ol><li>shifting</li><li>symmetry</li><li>卷积（注意是周期性卷积）</li></ol></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 信号处理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> DFT </tag>
             
         </tags>
       
