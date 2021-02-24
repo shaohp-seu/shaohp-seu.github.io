@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>ADS射频电路仿真学习笔记3-射频收发机系统仿真</title>
+      <link href="2021/02/24/2021-02-24-ADS%E5%B0%84%E9%A2%91%E7%94%B5%E8%B7%AF%E4%BB%BF%E7%9C%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E5%B0%84%E9%A2%91%E6%94%B6%E5%8F%91%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%BB%BF%E7%9C%9F/"/>
+      <url>2021/02/24/2021-02-24-ADS%E5%B0%84%E9%A2%91%E7%94%B5%E8%B7%AF%E4%BB%BF%E7%9C%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E5%B0%84%E9%A2%91%E6%94%B6%E5%8F%91%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%BB%BF%E7%9C%9F/</url>
+      
+        <content type="html"><![CDATA[<ol><li>mixer2不是混频器是用来非线性分析的。</li><li>用var可以方便地赋值。</li><li>用source的时候要注意加上50Ω的电阻，不然仿真容易出错。</li><li>预算链路仿真在谐波平衡和交流分析下都能进行，但如果在交流仿真中进行的话，混频器不能晶体管级的。也就是要已知混频器的非线性。</li><li>版本问题要尤为注意，最好准备两个版本，可以格式相互转化。</li><li>预算仿真要先做好预算路径设定，可以设定那个部分开始，那个部分结束。</li><li>[0]对应的是0阶</li><li>手册上的使用和现有版本不一致的要灵活应对，要更关注其中的逻辑。</li><li>如何更好的展现仿真数据——同时比较多组变化（直接在仿真软件内完成）</li><li>注意AC仿真和HB仿真对应的本振源是不一样的。</li><li>单位感觉ads设置的很混乱，经常容易漏了导致报错。</li><li>要学会模块化设计去简化设计流程和提高效率。</li><li>HB仿真噪声要noise controller和simulation controller一起配合使用</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 微波仿真软件-ADS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 射频仿真 </tag>
+            
+            <tag> ADS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数字信号处理2-z-tranform</title>
       <link href="2021/02/23/2021-02-23-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%862-z-tranform/"/>
       <url>2021/02/23/2021-02-23-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%862-z-tranform/</url>
