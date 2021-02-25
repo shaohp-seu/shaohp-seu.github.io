@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>CST从零开始1-基本操作（未完）</title>
+      <link href="2021/02/25/2021-02-25-CST%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B1-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89/"/>
+      <url>2021/02/25/2021-02-25-CST%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B1-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<ol><li>学习感受和心得<ol><li>近期目标就是熟悉CST的操作，使得可以仿真微带贴片阵列天线</li><li>感觉设计本质上还是在画图，和HFSS挺像的，得需要点空间想象能力</li><li>有些操作逻辑和HFSS是反过来的，关键有的一样有的不一样，很容易搞混，即使和cad也不像，使用起来很不适应</li><li>掌握好快捷键很重要，我感觉CST很多窗口逻辑杂乱不堪，一个个找太麻烦还是得记住那堆快捷键</li></ol></li><li>问题：<ol><li>激活选点的栅格模式死活找不到</li></ol></li><li>学习内容精炼:<ol><li>画图<ol><li>材质选择</li><li>图形分组和选择</li><li>视角改变—只能靠多熟悉</li><li>几何变换<ol><li>平移translate</li><li>缩放</li><li>旋转</li><li>镜像</li><li>平移复制</li></ol></li><li>布尔运算<ol><li>add</li><li>subtract</li><li>intersect</li><li>trim</li></ol></li><li>选择模型的点、面、线——关键是要记住快捷键<ol><li>棱边端点——P</li><li>棱边中点——M</li><li>圆心——C</li><li>圆上的点——R</li><li>面的中点——A</li><li>棱边——E</li><li>端面——F</li><li>边链——shift+E</li><li>面链——shift+F</li></ol></li></ol></li></ol></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 微波仿真软件-cst </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 微波仿真 </tag>
+            
+            <tag> cst </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ADS射频电路仿真学习笔记4-微带天线仿真</title>
+      <link href="2021/02/25/2021-02-25-ADS%E5%B0%84%E9%A2%91%E7%94%B5%E8%B7%AF%E4%BB%BF%E7%9C%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E5%BE%AE%E5%B8%A6%E5%A4%A9%E7%BA%BF%E4%BB%BF%E7%9C%9F/"/>
+      <url>2021/02/25/2021-02-25-ADS%E5%B0%84%E9%A2%91%E7%94%B5%E8%B7%AF%E4%BB%BF%E7%9C%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E5%BE%AE%E5%B8%A6%E5%A4%A9%E7%BA%BF%E4%BB%BF%E7%9C%9F/</url>
+      
+        <content type="html"><![CDATA[<ol><li>ads并不适合仿真微带天线，功能缺失，仿真天线还是主要靠CST和HFSS。</li><li>ads这块的学习主要着力于匹配电路的设计，momentum仿真主要用于场仿真，可以去仿真匹配与天线耦合，而原理图则是路仿真。</li><li>微带天线的阻抗一般都是100~200Ω，需要接一段阻抗匹配电路，最后连上输入点。一般工作在谐振点，要对S参数有针对性的优化。</li><li>微带天线优点<ol><li>剖面薄，体积小，重量轻</li><li>平面结构，共形设计</li><li>馈电网络可以和天线集成在一起</li><li>能和有源器件以及电源集成在一起</li><li>便于实现圆极化，双频带和双极化</li></ol></li><li>微带天线缺点<ol><li>频带窄</li><li>导体和介质损耗大，表面波</li><li>功率容量小</li><li>受基片材料影响大</li></ol></li><li>天线设计对理论要求很高，不能和电路那样单纯只会应用和强行仿真上去，要多动动脑子和深入理论推导，不然很难找到设计方法和优化的方向，哪怕只是微带天线这种最简单的天线。</li><li>微带天线设计方法<ol><li>传输模法—把矩形块等效为辐射阻抗加载的一段很宽的微带线，近似并且需要实验调整</li><li>谐振模法—把微带天线看成有碰壁的封闭腔体</li></ol></li><li>直接在layout里面仿真，按照步骤走，不要忘了设置端口（插入pin），实质上就是计算一些常见规整的阻抗，linecale计算线宽和线长或者反过来计算阻抗和相位，是个很重要的工具，阻抗匹配可以用tools-Smithchart，也可以设定S11目标进行优化来权衡线长的设计（便于工业化生产，往往线宽是固定的）</li><li>馈线不宜过长，因为微带天线本质也是一个微带线，过长导致自身也会变成一个天线，会对主天线的方向图造成干扰</li><li>可以把天线的参数导出到原理图上去进行仿真设计和优化</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 微波仿真软件-ADS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 射频仿真 </tag>
+            
+            <tag> ADS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ADS射频电路仿真学习笔记3-射频收发机系统仿真</title>
       <link href="2021/02/24/2021-02-24-ADS%E5%B0%84%E9%A2%91%E7%94%B5%E8%B7%AF%E4%BB%BF%E7%9C%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E5%B0%84%E9%A2%91%E6%94%B6%E5%8F%91%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%BB%BF%E7%9C%9F/"/>
       <url>2021/02/24/2021-02-24-ADS%E5%B0%84%E9%A2%91%E7%94%B5%E8%B7%AF%E4%BB%BF%E7%9C%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-%E5%B0%84%E9%A2%91%E6%94%B6%E5%8F%91%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%BB%BF%E7%9C%9F/</url>
