@@ -484,23 +484,24 @@
                 <p>circular convolution </p>
 <ol>
 <li><p>循环卷积用周期格式和线性卷积来表示</p>
-<p><img src="/2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/my_blog\shpblog\source_posts\数字信号处理-循环卷积\1.png"></p>
+
 </li>
 <li><p>循环卷积用线性卷积实现</p>
 <ol>
-<li>按照定义实现<img src="/2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/my_blog\shpblog\source_posts\数字信号处理-循环卷积\2.png"></li>
-<li>根据线性的性质交换次序优化<img src="/2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/my_blog\shpblog\source_posts\数字信号处理-循环卷积\3.png"></li>
+<li>按照定义实现</li>
+<li>根据线性的性质交换次序优化</li>
 </ol>
 </li>
 <li><p>循环卷积的本质：线性卷积+混叠</p>
-<p><img src="/2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/my_blog\shpblog\source_posts\数字信号处理-循环卷积\4.png"></p>
+
+
 <ol>
 <li>混叠——延迟N重复叠加</li>
 <li>N决定了混叠程度的大小</li>
 <li>N——脉冲串之间的间距</li>
 </ol>
 </li>
-<li><p>选取合适的N可以从循环卷积恢复成线性卷积，前者的脉冲串间距要大于后者<img src="/2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/my_blog\shpblog\source_posts\数字信号处理-循环卷积\5.png"></p>
+<li><p>选取合适的N可以从循环卷积恢复成线性卷积，前者的脉冲串间距要大于后者</p>
 <ol>
 <li>根据这一原理用零填充（padding with zero）方法实现循环卷积到线性卷积</li>
 <li>循环卷积的实现难度一般要比线性卷积更难以实现，所以尽可能变成线性卷积</li>
@@ -799,19 +800,19 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/26/2021-02-26-%E7%8E%B0%E4%BB%A3%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861-%E6%A6%82%E8%AE%BA/">
+                <a href="/2021/02/26/2021-02-26-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%863-DFT/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="现代数字信号处理1-概论">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="数字信号处理3-DFT">
                         
-                        <span class="card-title">现代数字信号处理1-概论</span>
+                        <span class="card-title">数字信号处理3-DFT</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            基于国科大张灏老师现代数字信号处理课程的学习笔记，主要是梳理关键概念和搭好知识框架
+                            主要梳理的是数字信号处理的相关概念，建立一个数字信号处理系统的概念，基于奥本海姆的离散时间信号处理
                         
                     </div>
                     <div class="publish-info">
@@ -822,8 +823,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%8E%B0%E4%BB%A3%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/" class="post-category">
-                                    现代信号处理
+                            <a href="/categories/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/" class="post-category">
+                                    信号处理
                                 </a>
                             
                             
@@ -833,8 +834,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%8E%B0%E4%BB%A3%E6%95%B0%E5%AD%97%E5%A4%84%E7%90%86/">
-                        <span class="chip bg-color">现代数字处理</span>
+                    <a href="/tags/DFT/">
+                        <span class="chip bg-color">DFT</span>
                     </a>
                     
                 </div>

@@ -21,7 +21,7 @@
       <link href="2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/"/>
       <url>2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/</url>
       
-        <content type="html"><![CDATA[<p>circular convolution </p><ol><li><p>循环卷积用周期格式和线性卷积来表示</p><p><img src="/2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/my_blog\shpblog\source_posts\数字信号处理-循环卷积\1.png"></p></li><li><p>循环卷积用线性卷积实现</p><ol><li>按照定义实现<img src="/2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/my_blog\shpblog\source_posts\数字信号处理-循环卷积\2.png"></li><li>根据线性的性质交换次序优化<img src="/2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/my_blog\shpblog\source_posts\数字信号处理-循环卷积\3.png"></li></ol></li><li><p>循环卷积的本质：线性卷积+混叠</p><p><img src="/2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/my_blog\shpblog\source_posts\数字信号处理-循环卷积\4.png"></p><ol><li>混叠——延迟N重复叠加</li><li>N决定了混叠程度的大小</li><li>N——脉冲串之间的间距</li></ol></li><li><p>选取合适的N可以从循环卷积恢复成线性卷积，前者的脉冲串间距要大于后者<img src="/2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/my_blog\shpblog\source_posts\数字信号处理-循环卷积\5.png"></p><ol><li>根据这一原理用零填充（padding with zero）方法实现循环卷积到线性卷积</li><li>循环卷积的实现难度一般要比线性卷积更难以实现，所以尽可能变成线性卷积</li></ol></li><li><p>块卷积法处理信号，把滤波信号分成长度为L的段，每段信号就可以与有限长脉冲响应进行卷积，并用一种适当的方法把滤波后的信号衔接在一起</p><ol><li>适当的方法<ol><li>重叠相加法——滤波后的序列段形成滤波后输出序列</li><li>重叠保留法——输入序列有重叠，每个接续的输入序列包含一部分新点，也包含先前序列保留下的一部分店</li><li>不能脑子还停留在过去的思维模式，信号处理不是单纯的恢复信号</li></ol></li></ol></li></ol>]]></content>
+        <content type="html"><![CDATA[<p>circular convolution </p><ol><li><p>循环卷积用周期格式和线性卷积来表示</p></li><li><p>循环卷积用线性卷积实现</p><ol><li>按照定义实现</li><li>根据线性的性质交换次序优化</li></ol></li><li><p>循环卷积的本质：线性卷积+混叠</p><ol><li>混叠——延迟N重复叠加</li><li>N决定了混叠程度的大小</li><li>N——脉冲串之间的间距</li></ol></li><li><p>选取合适的N可以从循环卷积恢复成线性卷积，前者的脉冲串间距要大于后者</p><ol><li>根据这一原理用零填充（padding with zero）方法实现循环卷积到线性卷积</li><li>循环卷积的实现难度一般要比线性卷积更难以实现，所以尽可能变成线性卷积</li></ol></li><li><p>块卷积法处理信号，把滤波信号分成长度为L的段，每段信号就可以与有限长脉冲响应进行卷积，并用一种适当的方法把滤波后的信号衔接在一起</p><ol><li>适当的方法<ol><li>重叠相加法——滤波后的序列段形成滤波后输出序列</li><li>重叠保留法——输入序列有重叠，每个接续的输入序列包含一部分新点，也包含先前序列保留下的一部分店</li><li>不能脑子还停留在过去的思维模式，信号处理不是单纯的恢复信号</li></ol></li></ol></li></ol>]]></content>
       
       
       <categories>
@@ -36,31 +36,6 @@
             <tag> DFT </tag>
             
             <tag> circular convolution </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>现代数字信号处理1-概论</title>
-      <link href="2021/02/26/2021-02-26-%E7%8E%B0%E4%BB%A3%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861-%E6%A6%82%E8%AE%BA/"/>
-      <url>2021/02/26/2021-02-26-%E7%8E%B0%E4%BB%A3%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861-%E6%A6%82%E8%AE%BA/</url>
-      
-        <content type="html"><![CDATA[<ol><li>学习注意点<ol><li>不能害怕符号，要通过反复练习克服对陌生符号的陌生感</li><li>要建立effective reading的方法，不要怕写下来</li></ol></li><li>学习核心点<ol><li>linear</li><li>gaussion——信号特性</li><li>stationary—宽平稳</li><li>orthogonal—正交——简单化</li></ol></li><li>decision——model——data<ol><li>前两者是概率</li><li>后两者是统计</li></ol></li><li>概率论回顾<ol><li>样本空间</li><li>随机变量 样本点的不确定性带来随机变量的不确定性</li><li>离散和连续的关系——分布函数、概率分布密度</li><li>常见分布<ol><li>伯努利分布</li><li>二项分布</li><li>泊松分布——稀有事件——二项分布在大数定律下的延伸</li><li>均匀分布</li><li>指数分布——等待某件事情发生</li><li>这些模型的学习原因都是因为它们的应用范围很广，分布是用来描绘随机现象的</li></ol></li><li>高斯分布<ol><li>概率密度</li><li>中心极限定理</li></ol></li><li>期望——帮助去确定分布（一般没人用定义算均值）<ol><li>复杂情况用均值分析的目的和落脚点是为了降低复杂度</li><li>线性——可加性</li><li>均值也可以理解为质量在空间分布的重心</li><li>均方——定义距离——离随机变量最近的确定性常数的距离</li></ol></li><li>方差——最近的距离是多少</li></ol></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 现代信号处理 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 现代数字处理 </tag>
             
         </tags>
       
@@ -86,6 +61,31 @@
         <tags>
             
             <tag> DFT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>现代数字信号处理1-概论</title>
+      <link href="2021/02/26/2021-02-26-%E7%8E%B0%E4%BB%A3%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861-%E6%A6%82%E8%AE%BA/"/>
+      <url>2021/02/26/2021-02-26-%E7%8E%B0%E4%BB%A3%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861-%E6%A6%82%E8%AE%BA/</url>
+      
+        <content type="html"><![CDATA[<ol><li>学习注意点<ol><li>不能害怕符号，要通过反复练习克服对陌生符号的陌生感</li><li>要建立effective reading的方法，不要怕写下来</li></ol></li><li>学习核心点<ol><li>linear</li><li>gaussion——信号特性</li><li>stationary—宽平稳</li><li>orthogonal—正交——简单化</li></ol></li><li>decision——model——data<ol><li>前两者是概率</li><li>后两者是统计</li></ol></li><li>概率论回顾<ol><li>样本空间</li><li>随机变量 样本点的不确定性带来随机变量的不确定性</li><li>离散和连续的关系——分布函数、概率分布密度</li><li>常见分布<ol><li>伯努利分布</li><li>二项分布</li><li>泊松分布——稀有事件——二项分布在大数定律下的延伸</li><li>均匀分布</li><li>指数分布——等待某件事情发生</li><li>这些模型的学习原因都是因为它们的应用范围很广，分布是用来描绘随机现象的</li></ol></li><li>高斯分布<ol><li>概率密度</li><li>中心极限定理</li></ol></li><li>期望——帮助去确定分布（一般没人用定义算均值）<ol><li>复杂情况用均值分析的目的和落脚点是为了降低复杂度</li><li>线性——可加性</li><li>均值也可以理解为质量在空间分布的重心</li><li>均方——定义距离——离随机变量最近的确定性常数的距离</li></ol></li><li>方差——最近的距离是多少</li></ol></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 现代信号处理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 现代数字处理 </tag>
             
         </tags>
       
