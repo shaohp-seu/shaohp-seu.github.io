@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数字信号处理3-DFT, 邵黄平的博客">
+    <meta name="keywords" content="数字信号处理4-循环卷积, 邵黄平的博客">
     <meta name="description" content="a home of an rf/antenna engineer">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数字信号处理3-DFT | 邵黄平的博客</title>
+    <title>数字信号处理4-循环卷积 | 邵黄平的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/true')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数字信号处理3-DFT</h1>
+                    <h1 class="description center-align post-title">数字信号处理4-循环卷积</h1>
                 </div>
             </div>
         </div>
@@ -435,6 +435,10 @@
                                 <span class="chip bg-color">DFT</span>
                             </a>
                         
+                            <a href="/tags/circular-convolution/">
+                                <span class="chip bg-color">circular convolution</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -443,8 +447,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/" class="post-category">
-                                信号处理
+                            <a href="/categories/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/" class="post-category">
+                                数字信号处理
                             </a>
                         
                     </div>
@@ -456,7 +460,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-26
+                    2021-02-27
                 </div>
                 
 
@@ -477,23 +481,37 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ol>
-<li>DFS—离散傅里叶序列，是一个序列，而不是一个连续变量的函数，相应于对信号的傅里叶变换进行频率的等间隔取样的样本。</li>
-<li>有限长序列的处理方式是周期化变成周期序列，然后根据离散傅里叶级数解决问题</li>
-<li>DFT和DFS要对应学习和理解，DFT是有限长序列的周期等价系数的傅里叶变换，是DFS一个周期的提取</li>
-<li>DFT相当于z变换在单位圆上的采样</li>
-<li>DFS的表示方法，与DTFT有所变化要对比着学习</li>
-<li>DFS特性<ol>
-<li>shifting <ol>
-<li>周期序列的傅里叶变换，要理解circular shift，要与之前的linear shift区分开来，要结合图像理解。</li>
+                <p>circular convolution </p>
+<ol>
+<li><p>循环卷积用周期格式和线性卷积来表示</p>
+<p><img src="F:\my_blog\shpblog\source_posts\数字信号处理-循环卷积\1.png"></p>
+</li>
+<li><p>循环卷积用线性卷积实现</p>
+<ol>
+<li>按照定义实现<img src="F:\my_blog\shpblog\source_posts\数字信号处理-循环卷积\2.png"></li>
+<li>根据线性的性质交换次序优化<img src="F:\my_blog\shpblog\source_posts\数字信号处理-循环卷积\3.png"></li>
 </ol>
 </li>
-<li>symmetry——对偶性质<ol>
-<li>在一个周期里面的对称0~N-1</li>
+<li><p>循环卷积的本质：线性卷积+混叠</p>
+<p><img src="F:\my_blog\shpblog\source_posts\数字信号处理-循环卷积\4.png"></p>
+<ol>
+<li>混叠——延迟N重复叠加</li>
+<li>N决定了混叠程度的大小</li>
+<li>N——脉冲串之间的间距</li>
 </ol>
 </li>
-<li>卷积（注意是circular卷积）<ol>
-<li>两个圆筒旋转卷积，一个圆筒翻转加在另一个圆筒上，两个圆筒叠在一起，卷积的过程就是圆筒转动时相互的序列值相乘最后相加的过程就相当于与二维化</li>
+<li><p>选取合适的N可以从循环卷积恢复成线性卷积，前者的脉冲串间距要大于后者<img src="F:\my_blog\shpblog\source_posts\数字信号处理-循环卷积\5.png"></p>
+<ol>
+<li>根据这一原理用零填充（padding with zero）方法实现循环卷积到线性卷积</li>
+<li>循环卷积的实现难度一般要比线性卷积更难以实现，所以尽可能变成线性卷积</li>
+</ol>
+</li>
+<li><p>块卷积法处理信号，把滤波信号分成长度为L的段，每段信号就可以与有限长脉冲响应进行卷积，并用一种适当的方法把滤波后的信号衔接在一起</p>
+<ol>
+<li>适当的方法<ol>
+<li>重叠相加法——滤波后的序列段形成滤波后输出序列</li>
+<li>重叠保留法——输入序列有重叠，每个接续的输入序列包含一部分新点，也包含先前序列保留下的一部分店</li>
+<li>不能脑子还停留在过去的思维模式，信号处理不是单纯的恢复信号</li>
 </ol>
 </li>
 </ol>
@@ -525,7 +543,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://shaohp-seu.github.io/2021/02/26/2021-02-26-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%863-DFT/">http://shaohp-seu.github.io/2021/02/26/2021-02-26-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%863-DFT/</a>
+                    <a href="http://shaohp-seu.github.io/2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/">http://shaohp-seu.github.io/2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -565,6 +583,10 @@
                             
                                 <a href="/tags/DFT/">
                                     <span class="chip bg-color">DFT</span>
+                                </a>
+                            
+                                <a href="/tags/circular-convolution/">
+                                    <span class="chip bg-color">circular convolution</span>
                                 </a>
                             
                         </div>
@@ -740,18 +762,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/">
+                <a href="/2021/02/27/%E7%8E%B0%E4%BB%A3%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%862-%E7%BB%9F%E8%AE%A1%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/">
                     <div class="card-image">
                         
-                        <img src="/true" class="responsive-img" alt="数字信号处理4-循环卷积">
                         
-                        <span class="card-title">数字信号处理4-循环卷积</span>
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="现代数字信号处理2-统计信号处理">
+                        
+                        <span class="card-title">现代数字信号处理2-统计信号处理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            主要是关于循环卷积和线性卷积的关系和相互转化，对实现后面的FFT打下基础
+                            
                         
                     </div>
                     <div class="publish-info">
@@ -760,27 +783,11 @@
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/" class="post-category">
-                                    数字信号处理
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            shaohp
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/DFT/">
-                        <span class="chip bg-color">DFT</span>
-                    </a>
-                    
-                    <a href="/tags/circular-convolution/">
-                        <span class="chip bg-color">circular convolution</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -792,19 +799,19 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/26/2021-02-26-%E7%8E%B0%E4%BB%A3%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861-%E6%A6%82%E8%AE%BA/">
+                <a href="/2021/02/26/2021-02-26-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%863-DFT/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="现代数字信号处理1-概论">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="数字信号处理3-DFT">
                         
-                        <span class="card-title">现代数字信号处理1-概论</span>
+                        <span class="card-title">数字信号处理3-DFT</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            基于国科大张灏老师现代数字信号处理课程的学习笔记，主要是梳理关键概念和搭好知识框架
+                            主要梳理的是数字信号处理的相关概念，建立一个数字信号处理系统的概念，基于奥本海姆的离散时间信号处理
                         
                     </div>
                     <div class="publish-info">
@@ -815,8 +822,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%8E%B0%E4%BB%A3%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/" class="post-category">
-                                    现代信号处理
+                            <a href="/categories/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/" class="post-category">
+                                    信号处理
                                 </a>
                             
                             
@@ -826,8 +833,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%8E%B0%E4%BB%A3%E6%95%B0%E5%AD%97%E5%A4%84%E7%90%86/">
-                        <span class="chip bg-color">现代数字处理</span>
+                    <a href="/tags/DFT/">
+                        <span class="chip bg-color">DFT</span>
                     </a>
                     
                 </div>
