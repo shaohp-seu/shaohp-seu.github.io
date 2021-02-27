@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>CST从零开始1-基本操作</title>
+      <link href="2021/02/27/2021-02-25-CST%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B1-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+      <url>2021/02/27/2021-02-25-CST%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B1-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
+      
+        <content type="html"><![CDATA[<ol><li>学习感受和心得<ol><li>近期目标就是熟悉CST的操作，使得可以仿真微带贴片阵列天线</li><li>感觉设计本质上还是在画图，和HFSS挺像的，得需要点空间想象能力</li><li>有些操作逻辑和HFSS是反过来的，关键有的一样有的不一样，很容易搞混，即使和cad也不像，使用起来很不适应</li><li>掌握好快捷键很重要，我感觉CST很多窗口逻辑杂乱不堪，一个个找太麻烦还是得记住那堆快捷键</li></ol></li><li>问题：<ol><li>激活选点的栅格模式死活找不到</li></ol></li><li>学习内容精炼:<ol><li>画图<ol><li>材质选择</li><li>图形分组和选择</li><li>视角改变—只能靠多熟悉</li><li>几何变换<ol><li>平移translate</li><li>缩放</li><li>旋转</li><li>镜像</li><li>平移复制</li></ol></li><li>布尔运算<ol><li>add</li><li>subtract</li><li>intersect</li><li>trim</li></ol></li><li>选择模型的点、面、线——关键是要记住快捷键<ol><li>棱边端点——P</li><li>棱边中点——M</li><li>圆心——C</li><li>圆上的点——R</li><li>面的中点——A</li><li>棱边——E</li><li>端面——F</li><li>边链——shift+E</li><li>面链——shift+F</li></ol></li><li>倒直角和倒圆角<ol><li>blend</li></ol></li><li>拉伸、旋转和渐变（针对的是面）<ol><li>extrude——延伸</li><li>整个面的旋转——找好旋转轴</li><li>渐变loft——选择两个端面</li><li>shell solid——掏空命令</li></ol></li><li>局部坐标系——W快捷键<ol><li>先选点、线或者面再建立WCS</li><li>选择三个点定一个坐标系</li></ol></li><li>历史记录和历史树<ol><li>找到每一步步骤可以随时恢复到任何一步</li><li>拓扑结构出现很大改变就没办法回复</li><li>历史树可以直接改变某一部分的参数</li></ol></li><li>创建曲线<ol><li>trim操作要多点几次确认</li><li>sweep curve可以由两个线构成一个封闭实体</li></ol></li><li>局部修改——local modifications<ol><li>只针对面去做调整和改变<ol><li>remove feature</li><li>change face radius</li><li>offset faces</li></ol></li></ol></li><li>创建平面导线<ol><li>用曲线去创建有限宽度和有限厚度的导线</li><li>trace from curve</li></ol></li></ol></li></ol></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 微波仿真软件-cst </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 微波仿真 </tag>
+            
+            <tag> cst </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>现代数字信号处理2-统计信号处理</title>
       <link href="2021/02/27/%E7%8E%B0%E4%BB%A3%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%862-%E7%BB%9F%E8%AE%A1%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/"/>
       <url>2021/02/27/%E7%8E%B0%E4%BB%A3%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%862-%E7%BB%9F%E8%AE%A1%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/</url>
@@ -102,33 +129,6 @@
         <tags>
             
             <tag> 现代数字信号处理 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>CST从零开始1-基本操作（未完）</title>
-      <link href="2021/02/25/2021-02-25-CST%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B1-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89/"/>
-      <url>2021/02/25/2021-02-25-CST%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B1-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89/</url>
-      
-        <content type="html"><![CDATA[<ol><li>学习感受和心得<ol><li>近期目标就是熟悉CST的操作，使得可以仿真微带贴片阵列天线</li><li>感觉设计本质上还是在画图，和HFSS挺像的，得需要点空间想象能力</li><li>有些操作逻辑和HFSS是反过来的，关键有的一样有的不一样，很容易搞混，即使和cad也不像，使用起来很不适应</li><li>掌握好快捷键很重要，我感觉CST很多窗口逻辑杂乱不堪，一个个找太麻烦还是得记住那堆快捷键</li></ol></li><li>问题：<ol><li>激活选点的栅格模式死活找不到</li></ol></li><li>学习内容精炼:<ol><li>画图<ol><li>材质选择</li><li>图形分组和选择</li><li>视角改变—只能靠多熟悉</li><li>几何变换<ol><li>平移translate</li><li>缩放</li><li>旋转</li><li>镜像</li><li>平移复制</li></ol></li><li>布尔运算<ol><li>add</li><li>subtract</li><li>intersect</li><li>trim</li></ol></li><li>选择模型的点、面、线——关键是要记住快捷键<ol><li>棱边端点——P</li><li>棱边中点——M</li><li>圆心——C</li><li>圆上的点——R</li><li>面的中点——A</li><li>棱边——E</li><li>端面——F</li><li>边链——shift+E</li><li>面链——shift+F</li></ol></li></ol></li></ol></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 微波仿真软件-cst </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 微波仿真 </tag>
-            
-            <tag> cst </tag>
             
         </tags>
       
@@ -296,8 +296,8 @@
     
     <entry>
       <title>数字信号处理1-DTFT</title>
-      <link href="2021/02/22/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86(%E6%9C%AA%E5%AE%8C)/"/>
-      <url>2021/02/22/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86(%E6%9C%AA%E5%AE%8C)/</url>
+      <link href="2021/02/22/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/"/>
+      <url>2021/02/22/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/</url>
       
         <content type="html"><![CDATA[<ol><li><p>离散时间信号系统</p><ol><li>采样，把采样sampling当成滤波器看待是一个很有意思的思路，理解采样定理必须和混叠aliasing相结合起来，混叠也是可以变废为宝的，导师之前提到过一个类似的思路，将之前的必须消除的表面波用作处理简单的交互。</li><li>理解LSI线性时不变系统，这是最基本也最常用的模型，复杂的模型也是在这基础上修改过的。</li><li>稳定性和因果性：这是信号系统最核心的两大性质。稳定就是输入有限输出必然有限，因果就是系统无法预见未来。实用中一般采用稳定系统，因果和非因果系统都有可以实际应用。因果稳定也可以作为限制条件来确定系数，处理最基本的问题即线性常系数微分方程</li><li>自己之前优点畏惧频率响应这个词，本质是就是幅度和相位，没有什么复杂的东西，抓性质和趋势，具体细节用matlab描绘，系统的频率响应即H(jw)就是w的函数，2π周期性也要注意</li></ol></li><li><p>离散时间傅里叶变换</p><ol><li>理解着整个过程，自己的理解有的地方不到位，</li><li>数字滤波器连续信号采样变成采样信号频谱，通过CD变成离散信号序列，经过Hd(jw)变成y(n)，再通过DC周期复制，再经过低通滤波器过滤出y(t)信号，不要和通信系统混淆。</li><li>DTFT不是对所有序列均存在，都能收敛——引入z变换和确定收敛域</li></ol></li></ol>]]></content>
       
