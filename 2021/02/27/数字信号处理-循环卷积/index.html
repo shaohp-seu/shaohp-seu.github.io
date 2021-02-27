@@ -484,16 +484,16 @@
                 <p>circular convolution </p>
 <ol>
 <li><p>循环卷积用周期格式和线性卷积来表示</p>
-
+<img src="/2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/1.png" class>
 </li>
 <li><p>循环卷积用线性卷积实现</p>
 <ol>
-<li>按照定义实现</li>
-<li>根据线性的性质交换次序优化</li>
+<li>按照定义实现<img src="/2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/2.png" class></li>
+<li>根据线性的性质交换次序优化<img src="/2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/3.png" class></li>
 </ol>
 </li>
 <li><p>循环卷积的本质：线性卷积+混叠</p>
-
+<img src="/2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/4.png" class>
 
 <ol>
 <li>混叠——延迟N重复叠加</li>
@@ -501,7 +501,7 @@
 <li>N——脉冲串之间的间距</li>
 </ol>
 </li>
-<li><p>选取合适的N可以从循环卷积恢复成线性卷积，前者的脉冲串间距要大于后者</p>
+<li><p>选取合适的N可以从循环卷积恢复成线性卷积，前者的脉冲串间距要大于后者<img src="/2021/02/27/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF/5.png" class></p>
 <ol>
 <li>根据这一原理用零填充（padding with zero）方法实现循环卷积到线性卷积</li>
 <li>循环卷积的实现难度一般要比线性卷积更难以实现，所以尽可能变成线性卷积</li>
