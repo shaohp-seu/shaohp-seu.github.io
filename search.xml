@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>数字信号处理5-线性常系数微分方程的框图表示</title>
+      <link href="2021/02/28/%E7%BA%BF%E6%80%A7%E5%B8%B8%E7%B3%BB%E6%95%B0%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E6%A1%86%E5%9B%BE%E8%A1%A8%E7%A4%BA/"/>
+      <url>2021/02/28/%E7%BA%BF%E6%80%A7%E5%B8%B8%E7%B3%BB%E6%95%B0%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E6%A1%86%E5%9B%BE%E8%A1%A8%E7%A4%BA/</url>
+      
+        <content type="html"><![CDATA[<ol><li>为什么要研究线性常系数微分方程<ol><li>这是一种非常重要的时间系统——实现起来结构简单</li></ol></li><li>基于线性常系数微分方程的数字系统基本架构<ol><li>输出=过去输出的线性组合+输入不同延迟的线性组合</li><li>边界条件决定是否因果</li><li>因果系统当n&lt;n1时输入为零，则n&lt;n1时输出为零</li></ol></li><li>主要内容就是讲怎么实现<ol><li>delay-时延<ol><li>Z变换=时延</li></ol></li><li>addition</li><li>multiplication</li></ol></li><li>信号流图——线性信号<ol><li>node<ol><li>source node——只进不出</li><li>sink node——只出不进</li></ol></li><li>branch</li><li>这只是一种分析方法，具体实现还是要矩阵表示数字网络，建立关系矩阵</li><li>本质上还是那三种方法的线性组合，毕竟线性常系数微分方程就那么多花样</li><li>不仅在z域分析也要在时域分析<ol><li>输出=过去输入的系数数乘线性叠加+输入时延的线性叠加＋输入的线性叠加</li><li>针对系数的Fc的问题要考虑网络是否computable<ol><li>判定标准—Fc矩阵的对角线和上三角上是否都是零<ol><li>是就可以计算</li><li>不是就不可以</li></ol></li><li>注意<ol><li>不可计算但方程组可以求解，只是不能按照w1w2w3的顺序求解节点变量</li><li>不可计算的情况是信号流图有无delay的封闭圆环</li></ol></li></ol></li></ol></li></ol></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数字信号处理 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CST从零开始1-基本操作</title>
       <link href="2021/02/27/2021-02-25-CST%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B1-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
       <url>2021/02/27/2021-02-25-CST%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B1-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
