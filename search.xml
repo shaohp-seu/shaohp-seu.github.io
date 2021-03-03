@@ -4,6 +4,58 @@
   
     
     <entry>
+      <title>CST从零开始2-S参数算例</title>
+      <link href="2021/03/03/2021-03-03-CST%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B2-S%E5%8F%82%E6%95%B0%E7%AE%97%E4%BE%8B/"/>
+      <url>2021/03/03/2021-03-03-CST%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B2-S%E5%8F%82%E6%95%B0%E7%AE%97%E4%BE%8B/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 微波仿真软件-cst </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 微波仿真 </tag>
+            
+            <tag> cst </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数字信号处理6-IIR</title>
+      <link href="2021/03/03/2021-03-03-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%866-IIR/"/>
+      <url>2021/03/03/2021-03-03-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%866-IIR/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>IIR infinite impulse response/FIR finite impulse response对比</p><p><a href="https://blog.csdn.net/qq_36024066/article/details/89508507%E8%BF%99%E7%AF%87%E5%8D%9A%E5%AE%A2%E8%AE%B2%E7%9A%84%E6%AF%94%E8%BE%83%E8%AF%A6%E7%BB%86%E5%85%B7%E4%BD%93%E2%80%94%E2%80%94%E4%BD%8E%E9%80%9A%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%8F%AF%E4%BB%A5%E5%BB%B6%E4%BC%B8%E8%AE%BE%E8%AE%A1%E5%85%B6%E4%BB%96%E4%B8%89%E7%A7%8D%E6%BB%A4%E6%B3%A2%E5%99%A8">https://blog.csdn.net/qq_36024066/article/details/89508507这篇博客讲的比较详细具体——低通滤波器可以延伸设计其他三种滤波器</a></p><p>FIR：有限脉冲响应滤波器。有限说明其脉冲响应是有限的。与IIR相比，FIR具有线性相位、容易设计的优点。这也就说明，<strong>IIR滤波器具有相位不线性，不容易设计</strong>的缺点。而另一方面，FIR却拥有IIR所不具有的缺点，那就是设计同样参数的滤波器，FIR比IIR需要更多的参数。这也就说明，要增加DSP的计算量。DSP需要更多的计算时间，对DSP的实时性有影响。</p><p>FIR设计理念：就是要设计<strong>一个数字滤波器</strong>去逼近一个理想的低通滤波器。</p><p>IIR设计理念：根据所要<strong>设计滤波器的参数</strong>去确定一个模拟滤波器的传输函数，然后再根据这个传输函数，通过双线性变换、或脉冲响应不变法来进行数字滤波器的设计。</p></li><li><p>系统响应——本质上是零极点设计，即分为ak和bk系数的确定问题</p><ol><li>零点设计/极点设计最开始分开的</li><li>定理：级联系统可以随意改变级联顺序，不影响整体的传递方程</li></ol></li><li><p>直接一/二型</p><ol><li>可以看出来输入输出的差分方程以及输入输出的零极点关系</li><li>二型主要共用延迟器，降低寄存器的数量</li></ol></li><li><p>级联型</p><ol><li>直接型的缺点<ol><li>系数不一定能准确表达出来</li><li>低阶的级联比一般n阶系统好</li><li>阶数越高，需要的位数越高，价格也就越高</li><li>系统误差对极点位置更敏感</li></ol></li><li>结构类似于六阶系统是3个二阶直接型级联的结构</li></ol></li><li><p>并联型</p><ol><li>结构是一阶和二阶IIR系统并联可能还有Np个简单幅度加权的延迟通道</li><li>和级联的区别在于<ol><li>级联是低阶零极点系统</li><li>并联是极点和residues</li></ol></li><li>优点：<ol><li>滤波器设计是参数自动以并行形式产生</li></ol></li></ol></li><li><p>倒置定理——信号流图</p><ol><li>传递方程保持不变<ol><li>所有branch方向倒转</li><li>对调输入和输出</li><li>为了便于理解镜像翻转</li></ol></li></ol></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数字信号处理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> IIR系统实现 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>学术英语写作1</title>
       <link href="2021/03/02/2021-03-02-%E5%AD%A6%E6%9C%AF%E8%8B%B1%E8%AF%AD%E5%86%99%E4%BD%9C1/"/>
       <url>2021/03/02/2021-03-02-%E5%AD%A6%E6%9C%AF%E8%8B%B1%E8%AF%AD%E5%86%99%E4%BD%9C1/</url>
