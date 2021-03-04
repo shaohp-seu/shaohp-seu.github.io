@@ -8,7 +8,7 @@
       <link href="2021/03/04/%E6%B5%8B%E8%AF%95%E7%94%A8/"/>
       <url>2021/03/04/%E6%B5%8B%E8%AF%95%E7%94%A8/</url>
       
-        <content type="html"><![CDATA[<img src="/2021/03/04/%E6%B5%8B%E8%AF%95%E7%94%A8/20.jpg" style="zoom:75%;">]]></content>
+        <content type="html"><![CDATA[<img src="/2021/03/04/%E6%B5%8B%E8%AF%95%E7%94%A8/20.jpg" style="zoom:75%;">$$<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">  <mtable columnalign="left" columnspacing="1em" rowspacing="4pt">    <mtr>      <mtd>        <mi mathvariant="normal">∇</mi>        <mo>×</mo>        <mi mathvariant="bold-italic">H</mi>        <mo>=</mo>        <mi mathvariant="bold-italic">J</mi>        <mo>+</mo>        <mfrac>          <mrow>            <mi mathvariant="normal">∂</mi>            <mi mathvariant="bold-italic">D</mi>          </mrow>          <mrow>            <mi mathvariant="normal">∂</mi>            <mrow>              <mi mathvariant="normal">t</mi>            </mrow>          </mrow>        </mfrac>      </mtd>    </mtr>    <mtr>      <mtd>        <mi mathvariant="normal">∇</mi>        <mo>×</mo>        <mi mathvariant="bold-italic">E</mi>        <mo>=</mo>        <mo>−</mo>        <mfrac>          <mrow>            <mi mathvariant="normal">∂</mi>            <mi mathvariant="bold-italic">B</mi>          </mrow>          <mrow>            <mi mathvariant="normal">∂</mi>            <mrow>              <mi mathvariant="normal">t</mi>            </mrow>          </mrow>        </mfrac>      </mtd>    </mtr>    <mtr>      <mtd>        <mi mathvariant="normal">∇</mi>        <mo>⋅</mo>        <mi mathvariant="bold-italic">B</mi>        <mo>=</mo>        <mn>0</mn>      </mtd>    </mtr>    <mtr>      <mtd>        <mi mathvariant="normal">∇</mi>        <mo>⋅</mo>        <mi mathvariant="bold-italic">D</mi>        <mo>=</mo>        <mi>ρ</mi>      </mtd>    </mtr>  </mtable></math>$$]]></content>
       
       
       
@@ -206,31 +206,6 @@
     
     
     <entry>
-      <title>数字信号处理3-DFT</title>
-      <link href="2021/02/26/2021-02-26-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%863-DFT/"/>
-      <url>2021/02/26/2021-02-26-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%863-DFT/</url>
-      
-        <content type="html"><![CDATA[<ol><li>DFS—离散傅里叶序列，是一个序列，而不是一个连续变量的函数，相应于对信号的傅里叶变换进行频率的等间隔取样的样本。</li><li>有限长序列的处理方式是周期化变成周期序列，然后根据离散傅里叶级数解决问题</li><li>DFT和DFS要对应学习和理解，DFT是有限长序列的周期等价系数的傅里叶变换，是DFS一个周期的提取</li><li>DFT相当于z变换在单位圆上的采样</li><li>DFS的表示方法，与DTFT有所变化要对比着学习</li><li>DFS特性<ol><li>shifting <ol><li>周期序列的傅里叶变换，要理解circular shift，要与之前的linear shift区分开来，要结合图像理解。</li></ol></li><li>symmetry——对偶性质<ol><li>在一个周期里面的对称0~N-1</li></ol></li><li>卷积（注意是circular卷积）<ol><li>两个圆筒旋转卷积，一个圆筒翻转加在另一个圆筒上，两个圆筒叠在一起，卷积的过程就是圆筒转动时相互的序列值相乘最后相加的过程就相当于与二维化</li></ol></li></ol></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 信号处理 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> DFT </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>现代数字信号处理1-概论</title>
       <link href="2021/02/26/2021-02-26-%E7%8E%B0%E4%BB%A3%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861-%E6%A6%82%E8%AE%BA/"/>
       <url>2021/02/26/2021-02-26-%E7%8E%B0%E4%BB%A3%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861-%E6%A6%82%E8%AE%BA/</url>
@@ -248,6 +223,31 @@
         <tags>
             
             <tag> 现代数字信号处理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数字信号处理3-DFT</title>
+      <link href="2021/02/26/2021-02-26-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%863-DFT/"/>
+      <url>2021/02/26/2021-02-26-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%863-DFT/</url>
+      
+        <content type="html"><![CDATA[<ol><li>DFS—离散傅里叶序列，是一个序列，而不是一个连续变量的函数，相应于对信号的傅里叶变换进行频率的等间隔取样的样本。</li><li>有限长序列的处理方式是周期化变成周期序列，然后根据离散傅里叶级数解决问题</li><li>DFT和DFS要对应学习和理解，DFT是有限长序列的周期等价系数的傅里叶变换，是DFS一个周期的提取</li><li>DFT相当于z变换在单位圆上的采样</li><li>DFS的表示方法，与DTFT有所变化要对比着学习</li><li>DFS特性<ol><li>shifting <ol><li>周期序列的傅里叶变换，要理解circular shift，要与之前的linear shift区分开来，要结合图像理解。</li></ol></li><li>symmetry——对偶性质<ol><li>在一个周期里面的对称0~N-1</li></ol></li><li>卷积（注意是circular卷积）<ol><li>两个圆筒旋转卷积，一个圆筒翻转加在另一个圆筒上，两个圆筒叠在一起，卷积的过程就是圆筒转动时相互的序列值相乘最后相加的过程就相当于与二维化</li></ol></li></ol></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 信号处理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> DFT </tag>
             
         </tags>
       
