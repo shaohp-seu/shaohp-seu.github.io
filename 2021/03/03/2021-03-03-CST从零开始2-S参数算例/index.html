@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CST从零开始2-S参数算例（未完）, 邵黄平的博客">
+    <meta name="keywords" content="CST从零开始2-S参数算例, 邵黄平的博客">
     <meta name="description" content="a home of an rf/antenna engineer">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CST从零开始2-S参数算例（未完） | 邵黄平的博客</title>
+    <title>CST从零开始2-S参数算例 | 邵黄平的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CST从零开始2-S参数算例（未完）</h1>
+                    <h1 class="description center-align post-title">CST从零开始2-S参数算例</h1>
                 </div>
             </div>
         </div>
@@ -504,6 +504,34 @@
 </ol>
 </li>
 <li>CST的view功能也非常强大和HFSS那个简陋的建模完全不是一回事</li>
+<li>CST-S参数设置准备——瞬态仿真就是时域仿真<ol>
+<li>定义端口</li>
+<li>定义边界条件和对称面（怎么在原有基础上去做裁剪自己这方面能力还不够）<ol>
+<li>一般都设置为电边界</li>
+<li>利用好对称可以节约计算资源和时间</li>
+<li>对称面为理想磁壁——磁场无切向分量</li>
+</ol>
+</li>
+<li>查看网格</li>
+<li>开始仿真</li>
+<li>分析端口模式</li>
+<li>分析S参量<ol>
+<li>CST的主要参数都在导航树和上面导航栏里面可以直接搞出来</li>
+</ol>
+</li>
+<li>自适应网格加密</li>
+<li>分析各频率的电磁场</li>
+</ol>
+</li>
+<li>参数化模型和自动优化结构<ol>
+<li>要充分利用好history list，有些操作必须前面的操作完全结束后才能开始进一步的操作</li>
+<li>更改参数经常会引起结构拓扑关系的改变，从而导致结构更新改变</li>
+<li>仿真器的精度主要取决于结构的离散化，可以通过加密网格来提高精度</li>
+<li>截断误差定为万分之一，即accuracy为-40dB</li>
+</ol>
+</li>
+<li>还是得看英文指导，不要想着偷懒看中文，中文的指导过时离谱了。</li>
+<li>很多老的指导功能其实都集成在新的模块里面，重新去找其实挺好笑的</li>
 </ol>
 </li>
 <li>注意CST操作界面的引导，不同部件的仿真模式是不同的，没找到仿真算法的选择在那儿，明天加以解决</li>
