@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="微波毫米波工程设计0315, 邵黄平的博客">
+    <meta name="keywords" content="学术英语3——方法和结果, 邵黄平的博客">
     <meta name="description" content="a home of an rf/antenna engineer">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>微波毫米波工程设计0315 | 邵黄平的博客</title>
+    <title>学术英语3——方法和结果 | 邵黄平的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">微波毫米波工程设计0315</h1>
+                    <h1 class="description center-align post-title">学术英语3——方法和结果</h1>
                 </div>
             </div>
         </div>
@@ -429,29 +429,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/RRU/">
-                                <span class="chip bg-color">RRU</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%8E%A5%E6%94%B6%E6%9C%BA/">
-                                <span class="chip bg-color">接收机</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%BE%AE%E6%B3%A2%E6%AF%AB%E7%B1%B3%E6%B3%A2%E5%B7%A5%E7%A8%8B%E8%AE%BE%E8%AE%A1/" class="post-category">
-                                微波毫米波工程设计
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -460,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-15
+                    2021-03-17
                 </div>
                 
 
@@ -481,109 +464,170 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ol>
-<li>移动通信最重要的指标是覆盖率，要提升覆盖率，又不想像纯粹基站那样消耗那么多电力，可以采用直放站或者4G/5G采用的比较多的中继RRU。<ol>
-<li>直放站——微波电路中更像就是一个放大器<ol>
-<li>链路仿真——增益和损失要建立一个概念和模型</li>
-<li>缺点：<ol>
-<li>网络损耗没有考虑进去，放大器不仅放大信号还放大噪声，使得原基站的覆盖区域反而降低了，因为不能单纯考虑下行（基站-终端），也要考虑上行（终端-基站），不仅要正向考虑还要反向考虑，移动通信是双向通信。</li>
-<li>直放站的功耗太高，没有时分/频分的概念，不知道什么时候开，什么时候关，耗电量很大。</li>
+                <h1 id="1-The-Structure-of-the-Method-Section"><a href="#1-The-Structure-of-the-Method-Section" class="headerlink" title="1. The Structure of the Method Section"></a>1. The Structure of the Method Section</h1><ol>
+<li>Different titles of the method section<ol>
+<li>Materials and Methods</li>
+<li>Theory and Methods</li>
+<li>Theoretical Framework and Methods</li>
+</ol>
+</li>
+<li>The major elements in the method section<ol>
+<li>Steps</li>
+<li>Materials</li>
+<li>Major elements involved:<ol>
+<li>Overview of the experiment</li>
+<li>Population</li>
+<li>Location</li>
+<li>Restriction/Limiting conditions</li>
+<li>Sampling Techniques</li>
+<li>Materials</li>
+<li>Procedures</li>
+<li>Statistical Treatment</li>
+<li>Note: Not all the items are included in all disciplines</li>
 </ol>
 </li>
 </ol>
 </li>
-<li>4G/5G——直放站淘汰-中继relay/接力基站<ol>
-<li>优点<ol>
-<li>可以采用编码的方式抑制噪声</li>
-<li>降低耗电量</li>
-<li>时频可以不同</li>
-<li>升级空间大——中继站可以升级成基站能力强</li>
+<li>The methodology section<ol>
+<li>Methodology</li>
+<li>The rationales</li>
+<li>The fundamental reasons or principles of doing things</li>
 </ol>
 </li>
-<li>对于5G来说，育婴区域越大，越需要更多的中继处理——RRU-remote radio unit远端射频单元<ol>
-<li>对于现在的射频设计来说，数字电路尤其是高速数字电路的比重只会越来越大，边缘计算使得射频端要包含越来越多的数字电路，数字化是大势所趋。</li>
-<li>BBU(building baseband unit)和RRU构成enode B</li>
-<li>5G一个很重要的指标是降低网络延时——扁平化设计/分布式设计/cell-free设计<ol>
-<li>分布式模型就是1个BBU对应1个RRU变成1个BBU对应多个小RRU</li>
-<li>这样的变化能够明显降低信噪比，利用好MIMO技术降低规模和成本</li>
+<li>Tips for avoiding plagiarism<ol>
+<li>Acknowledging those authors/researchers to avoid plagiarism<ol>
+<li>Being familiar with the theories and principles of designing and conducting experiments</li>
+<li>Referencing well</li>
 </ol>
 </li>
 </ol>
 </li>
 </ol>
-</li>
+<h1 id="2-The-Structure-of-the-Results-Section"><a href="#2-The-Structure-of-the-Results-Section" class="headerlink" title="2. The Structure of the Results Section"></a>2. The Structure of the Results Section</h1><ol>
+<li>Major elements<ol>
+<li>The statement showing where the results can be found</li>
+<li>The statement presenting the most important findings</li>
+<li>The statement commenting on the results</li>
 </ol>
 </li>
-<li>TDD/FDD RRU <ol>
-<li>架构<ol>
-<li>CPRI(common public radio interface)-DIF-DPD-DAC-正交调制-PA-双工器/TR开关-天线</li>
-<li>天线-双工器/TR开关-LNA-正交调制-ADC-DPD-DIF-CPRI</li>
+<li>The presentation of the results section<ol>
+<li>Diagrams/Graphs</li>
+<li>Texts</li>
 </ol>
 </li>
-<li>标准数字接口<ol>
-<li>波形/数字基带/IQ方式——各企业相同</li>
-<li>信令控制——各企业不同</li>
+<li>The order of the results<ol>
+<li>Research questions</li>
+<li>Research methods</li>
 </ol>
 </li>
-<li>数据量急剧增长时，数字基带的容量要改变制式扩容</li>
-<li>ADCDAC的接口需要FPGA，此外还可以在ADC后部分解码来降低数据处理量</li>
-<li>TDD—收发切换开关 FDD—滤波器选择频率（TDD一直占据主流）</li>
-</ol>
-</li>
-<li>3.5GHz RRU RF基带单板</li>
-<li>AD9371集成式宽带RF收发器<ol>
-<li>直接解调难度很大</li>
-<li>产品参数不仅要看优点更要看缺点，还要注意很多细节——限制情况</li>
-<li>缺点<ol>
-<li>噪声系数很大</li>
-<li>哪怕应用于pico-cell功率也不够</li>
-</ol>
-</li>
-<li>测试——入网的限制你要看每项具体的测试参数<ol>
-<li>每一项指标没可能讨价还价</li>
-<li>有时候需要一些应试技巧</li>
+<li>The language focuses<ol>
+<li>Sequential markers</li>
+<li>Graphic descriptions</li>
+<li>Comparison and contrast</li>
 </ol>
 </li>
 </ol>
+<h1 id="3-Sequential-Markers"><a href="#3-Sequential-Markers" class="headerlink" title="3. Sequential Markers"></a>3. Sequential Markers</h1><ol>
+<li><p>Importance of sequential markers</p>
+<ol>
+<li><p>Building up connections between ideas</p>
 </li>
-<li>接收机<ol>
-<li>核心参数——灵敏度<ol>
-<li>噪声系数——过高竞争力不够，过低容易做不了</li>
-<li>相位噪声</li>
-<li>失真<ol>
-<li>非线性</li>
-<li>线性</li>
+<li><p>Ensuring that sentences and paragraphs flow together smoothly</p>
+<p>note；Pay attention to the procedure description and the writing of process paragraphs.</p>
+</li>
+</ol>
+</li>
+<li><p>Commonly used sequential markers</p>
+<ol>
+<li>To indicate a particular time frame or a shift from one time period<br>to another</li>
+<li>words</li>
+</ol>
+</li>
+</ol>
+<h1 id="4-Graphic-Description"><a href="#4-Graphic-Description" class="headerlink" title="4. Graphic Description"></a>4. Graphic Description</h1><ol>
+<li>Introduction of graphs<ol>
+<li>The definition<ol>
+<li>A graph is a diagram, usually a line or a curve, which shows how two or more and sets of numbers measurements are related</li>
+</ol>
+</li>
+<li>The types<ol>
+<li>Graphs usually include bar/column charts/graphs, pie charts and line graphs.</li>
 </ol>
 </li>
 </ol>
 </li>
-<li>参考值——外部只有白噪声</li>
-<li>各种干扰——怎么测，用什么指标去表征<ol>
-<li>选择性<ol>
-<li>邻道干扰——会导致降敏——具体表征是误码率误帧率——滤波器</li>
+<li>Use of graphs in the results section<ol>
+<li>Prepare the graphs as soon as all the data are analyzed and arrange them in the sequence that best presents your results in a logical way;</li>
+<li>Describe the graphs well because good descriptions can help the readers understand your research better.</li>
 </ol>
 </li>
-<li>本振的相位噪声的干扰，本振的相位噪声混频进入信号频带内——相位噪声需要足够低</li>
-<li>组合频率进入信号率内——非线性——IP3足够高<ol>
-<li>前级增益越高，输入IP3越低，这就导致一种矛盾像是噪声抑制前级放大器越大越好，这样反而容易导致交调失真——LNA增益不能过高</li>
+<li>Description of Graphs<ol>
+<li>Introduce the graphic information briefly and indicate the main trend. Normally it includes the place, time, content and purpose of the graph;</li>
+<li>Describe the relevant and most important or significant data and make some comparison if necessary;</li>
+<li>Summarize the data/trends</li>
 </ol>
 </li>
-<li>平坦度，每一部分失真叠加起来<ol>
-<li>这一指标主要对以前3G很重要，对现在的4g来说要求没那么高，因为OFDM</li>
-<li>滤波器带内本身就有纹波，滤波器窄的话，平坦度就很低，宽的话选择性就不好</li>
-<li>有时候测试其他指标都没问题，失真严重就有可能是这个原因</li>
+<li>Useful words, phrases or sentence patterns in different situations of graphic description.<ol>
+<li>When Introducing the graphic information and making a general statement</li>
+<li>when referring to a graph</li>
+<li>when describing a graph</li>
+<li>when describing a curve or a trend</li>
+<li>when making a conclusion</li>
 </ol>
 </li>
-<li>正交性</li>
-<li>时钟，现在都是网络时钟就很难存在这个问题<ol>
-<li>AD采样出现的时钟抖动，和相噪有关系</li>
-<li>眼图可以表征</li>
-<li>解决方法就是高Q的晶振</li>
+</ol>
+<h1 id="5-Comparison-and-Contrast"><a href="#5-Comparison-and-Contrast" class="headerlink" title="5. Comparison and Contrast"></a>5. Comparison and Contrast</h1><ol>
+<li>The definition and commonly used expressions<ol>
+<li>The definition<br>— Strictly speaking, comparison is to show the similarities<br>while contrast is to show the differences</li>
+<li>Commonly used expressions<ol>
+<li>comparison<ol>
+<li>like </li>
+<li>too </li>
+<li>similar as </li>
+<li>similarly </li>
+<li>both </li>
+<li>likewise </li>
+<li>as well as </li>
+<li>also </li>
+<li>in the same way </li>
+<li>have in common </li>
+<li>the same as</li>
 </ol>
 </li>
-<li>版图设计有关</li>
+<li>contrast<ol>
+<li>although </li>
+<li>yet </li>
+<li>whereas, </li>
+<li>however </li>
+<li>but, while </li>
+<li>instead, unlike </li>
+<li>unless, </li>
+<li>be different from </li>
+<li>the reverse, differ </li>
+<li>contrary to, conversely </li>
+<li>even though, on the contrary </li>
+<li>on the other hand</li>
 </ol>
 </li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Two major ways of organization<ol>
+<li>Block comparison or block contrast<ol>
+<li>To examine one thing thoroughly and then examine the other</li>
+</ol>
+</li>
+<li>Alternating comparison or alternating contrast<ol>
+<li>To examine two things at the same time, discussing them point by point</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Tips for making comparison or contrast<ol>
+<li>Not all the information has to be compared or contrasted<br>with each other</li>
+<li>It is not necessary to lay equal emphasis on every change</li>
+<li>The comparison/contrast should be supported by<br>concrete and relevant facts or data.</li>
 </ol>
 </li>
 </ol>
@@ -603,7 +647,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">邵黄平</a>
+                    <a href="/about" rel="external nofollow noreferrer">shaohp</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -613,7 +657,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://shaohp-seu.github.io/2021/03/15/%E5%BE%AE%E6%B3%A2%E6%AF%AB%E7%B1%B3%E6%B3%A2%E5%B7%A5%E7%A8%8B%E8%AE%BE%E8%AE%A10315/">http://shaohp-seu.github.io/2021/03/15/%E5%BE%AE%E6%B3%A2%E6%AF%AB%E7%B1%B3%E6%B3%A2%E5%B7%A5%E7%A8%8B%E8%AE%BE%E8%AE%A10315/</a>
+                    <a href="http://shaohp-seu.github.io/2021/03/17/%E5%AD%A6%E6%9C%AF%E8%8B%B1%E8%AF%AD3%E2%80%94%E2%80%94%E6%96%B9%E6%B3%95%E5%92%8C%E7%BB%93%E6%9E%9C/">http://shaohp-seu.github.io/2021/03/17/%E5%AD%A6%E6%9C%AF%E8%8B%B1%E8%AF%AD3%E2%80%94%E2%80%94%E6%96%B9%E6%B3%95%E5%92%8C%E7%BB%93%E6%9E%9C/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -626,7 +670,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">邵黄平</a>
+                    <a href="/about" target="_blank">shaohp</a>
                     !
                 </span>
             </div>
@@ -650,15 +694,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/RRU/">
-                                    <span class="chip bg-color">RRU</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%8E%A5%E6%94%B6%E6%9C%BA/">
-                                    <span class="chip bg-color">接收机</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -828,58 +864,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/03/16/%E7%A7%91%E6%8A%80%E8%8B%B1%E8%AF%AD2/">
+                <a href="/2021/03/17/%E5%AD%A6%E6%9C%AF%E8%8B%B1%E8%AF%AD3%E2%80%94%E2%80%94%E6%96%B9%E6%B3%95%E5%92%8C%E7%BB%93%E6%9E%9C/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="科技英语2">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="学术英语3——方法和结果">
                         
-                        <span class="card-title">科技英语2</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Grammar for EST (ENGLISH FOR science and technology)
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-16
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%A7%91%E6%8A%80%E8%8B%B1%E8%AF%AD/" class="post-category">
-                                    科技英语
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/03/08/%E5%BE%AE%E6%B3%A2%E6%AF%AB%E7%B1%B3%E6%B3%A2%E5%B7%A5%E7%A8%8B%E8%AE%BE%E8%AE%A12/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="微波毫米波工程设计2">
-                        
-                        <span class="card-title">微波毫米波工程设计2</span>
+                        <span class="card-title">学术英语3——方法和结果</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -890,35 +886,53 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-17
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%BE%AE%E6%B3%A2%E6%AF%AB%E7%B1%B3%E6%B3%A2%E5%B7%A5%E7%A8%8B%E8%AE%BE%E8%AE%A1/" class="post-category">
-                                    微波毫米波工程设计
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            shaohp
                             
                         </span>
                     </div>
                 </div>
+
                 
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E4%BF%A1%E9%81%93%E6%A6%82%E5%BF%B5/">
-                        <span class="chip bg-color">信道概念</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%BC%A0%E8%BE%93%E7%BA%BF%E7%90%86%E8%AE%BA%E4%B8%8E%E5%BA%94%E7%94%A8/">
-                        <span class="chip bg-color">传输线理论与应用</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%BE%AE%E6%B3%A2%E6%95%A3%E5%B0%84%E5%8F%82%E6%95%B0/">
-                        <span class="chip bg-color">微波散射参数</span>
-                    </a>
-                    
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/03/17/%E5%AD%A6%E6%9C%AF%E8%8B%B1%E8%AF%AD2-%E6%96%87%E7%8C%AE%E7%BB%BC%E8%BF%B0/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="学术英语2-文献综述">
+                        
+                        <span class="card-title">学术英语2-文献综述</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            shaohp
+                            
+                        </span>
+                    </div>
                 </div>
                 
             </div>
